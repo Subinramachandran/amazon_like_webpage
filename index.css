@@ -75,8 +75,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     background-color: white;
-    border-radius: 6px;
-    overflow: hidden;
+    border-radius: 6px;   
 }
 
 .header-right {
