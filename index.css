@@ -1,0 +1,373 @@
+:root {
+    /* ===== AMAZON BRAND COLORS ===== */
+
+    /* Header */
+    --primary-color: #131921;
+    /* Amazon dark header */
+    --secondary-color: #ffffff;
+    /* Cards / sidebar background */
+
+    /* Hover & accent */
+    --hover-bg: #617286;
+    /* Navbar hover */
+    --amazon-orange: #febd69;
+    /* CTA / highlight */
+    --amazon-orange-dark: #f3a847;
+    /* Hover CTA */
+
+    /* Footer */
+    --footer-bg: #232f3e;
+
+    /* Status */
+    --deal-color: #0ccc3c;
+    /* Deal red */
+    --sold-color: #c90d0d;
+    /* Sold out */
+
+    /* Text */
+    --price-color: #b12704;
+    /* Amazon price red */
+    --title-color: #0f1111;
+    /* Dark text */
+    --muted-text: #565959;
+
+    /* Background */
+    --page-bg: #eaeded;
+    /* Amazon page background */
+
+    /* Spacing */
+    --padding-sm: 8px;
+    --padding-md: 16px;
+    --padding-lg: 24px;
+
+    /* Font sizes */
+    --font-sm: 0.9rem;
+    --font-md: 1.1rem;
+
+    /* Effects */
+    --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    --radius-sm: 4px;
+    --radius-md: 6px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--page-bg);
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 3fr 1fr;
+    /* Areas */
+    grid-template-areas:
+        "header header"
+        "footer footer";    
+}
+
+.header {
+    grid-area: header;
+}
+
+.product-grid {
+    grid-area: product-card;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: var(--primary-color);
+}
+
+.header-left {
+    flex-shrink: 0;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.amazon-heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Amazon smile underline */
+.amazon-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 22px;
+    width: 40px;
+    height: 4px;
+    background-color: #febd69;
+    border-radius: 50px;
+}
+
+.search-category {
+    border: none;
+    height: 44px;
+    padding: 10px;
+    background-color: #f3f3f3;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-btn {
+  width: 48px;
+  height: 44px;
+  border: none;
+  background-color: #febd69;   /* Amazon yellow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: var(--amazon-orange-dark);
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 6px 8px;
+}
+
+.nav-links:hover {
+    background-color: var(--hover-bg);
+    border-radius: 4px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "product-card sidebar";
+    padding: var(--padding-md);
+    gap: var(--padding-md);
+}
+
+.product-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: auto auto;
+    gap: var(--padding-md);
+    margin-bottom: 20px;
+}
+
+.product-card {
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: var(--padding-md);
+    border-radius: var(--radius-md);
+    background-color: white;
+    text-align: center;
+    transition: transform 0.3s ease box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-card h4 {
+    font-size: var(--font-md);
+    color: var(--title-color);
+}
+
+.price {
+    margin-top: var(--padding-sm);
+    font-size: var(--font-sm);
+    margin-bottom: var(--padding-sm);
+    color: var(--price-color);
+}
+
+.sidebar {
+    flex: 1;
+    background-color: var(--secondary-color);
+    padding: var(--padding-md);
+    background-color: white;
+}
+
+.badge {
+    position: absolute;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: var(--radius-sm);
+    top: 10px;
+    right: 10px;
+    transform: translateY(-2px);
+}
+
+.deal {
+    background-color: var(--deal-color);
+}
+
+.sold {
+    background-color: var(--sold-color);
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    padding: var(--padding-lg);
+    font-size: var(--font-md);
+    color: white;
+    display: flex;
+    flex-direction: column;    
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--padding-md); /* add some space between columns */
+    margin-bottom: var(--padding-md); 
+}
+
+.footer h4 {
+    margin-bottom: var(--padding-sm);
+}
+
+.footer p {
+    cursor: pointer;
+}
+
+.footer p:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "header"
+            "product-card"
+            "sidebar"
+            "footer";
+    }
+    
+    .header {
+        position: relative;
+        flex-wrap: wrap;        
+    }
+    .header h1{
+        margin-bottom: 8px;
+    }
+    .header-center {
+        order: 3;
+        overflow: visible;
+        width: 100%;
+        margin-top: 8px;
+    }
+    
+
+    .search-category,
+    .search-input,
+    .search-btn {
+        height: 42px;
+        
+    }
+    .search-category{
+        width: 60px;
+        font-size: 0.85rem;
+    }
+    .search-category,
+    .search-btn {
+        flex-shrink: 0;
+        /* 👈 CRITICAL */
+    }
+
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        color: white;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 115px;
+        right: 10px;       
+        background-color: rgb(178, 173, 167);
+        z-index: 1;
+    }
+
+    #menu-toggle:checked+.hamburger+.navbar {
+        display: flex;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "product-card"
+            "sidebar";
+    }
+
+}
