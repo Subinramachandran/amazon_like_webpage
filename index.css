@@ -59,28 +59,6 @@
 body {
     font-family: sans-serif;
     background-color: var(--page-bg);
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 3fr 1fr;
-    /* Areas */
-    grid-template-areas:
-        "header header"
-        "footer footer";    
-}
-
-.header {
-    grid-area: header;
-}
-
-.product-grid {
-    grid-area: product-card;
-}
-
-.sidebar {
-    grid-area: sidebar;
-}
-
-.footer {
-    grid-area: footer;
 }
 
 .header {
@@ -198,8 +176,6 @@ body {
 .main-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        "product-card sidebar";
     padding: var(--padding-md);
     gap: var(--padding-md);
 }
@@ -207,8 +183,7 @@ body {
 .product-grid {
     flex: 3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));    
     gap: var(--padding-md);
     margin-bottom: 20px;
 }
