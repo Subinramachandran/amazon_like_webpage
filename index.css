@@ -186,7 +186,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: var(--padding-md);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .product-card {
@@ -253,15 +253,13 @@ body {
     font-size: var(--font-md);
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .footer-columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--padding-md);
-    /* add some space between columns */
-    margin-bottom: var(--padding-md);
+    gap: var(--padding-md);       
 }
 
 .footer h4 {
@@ -292,15 +290,7 @@ body {
         overflow: visible;
         width: 100%;
         margin-top: 8px;
-    }
-
-
-    .search-category,
-    .search-input,
-    .search-btn {
-        height: 42px;
-
-    }
+    }   
 
     .search-category {
         width: 60px;
