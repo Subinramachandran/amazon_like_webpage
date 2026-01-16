@@ -133,14 +133,15 @@ body {
 }
 
 .search-btn {
-  width: 48px;
-  height: 44px;
-  border: none;
-  background-color: #febd69;   /* Amazon yellow */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+    width: 48px;
+    height: 44px;
+    border: none;
+    background-color: #febd69;
+    /* Amazon yellow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .search-btn:hover {
@@ -183,7 +184,7 @@ body {
 .product-grid {
     flex: 3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));    
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: var(--padding-md);
     margin-bottom: 20px;
 }
@@ -252,14 +253,15 @@ body {
     font-size: var(--font-md);
     color: white;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .footer-columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--padding-md); /* add some space between columns */
-    margin-bottom: var(--padding-md); 
+    gap: var(--padding-md);
+    /* add some space between columns */
+    margin-bottom: var(--padding-md);
 }
 
 .footer h4 {
@@ -284,38 +286,35 @@ body {
             "sidebar"
             "footer";
     }
-    
+
     .header {
         position: relative;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;
     }
-    .header h1{
+
+    .header h1 {
         margin-bottom: 8px;
     }
+
     .header-center {
         order: 3;
         overflow: visible;
         width: 100%;
         margin-top: 8px;
     }
-    
+
 
     .search-category,
     .search-input,
     .search-btn {
         height: 42px;
-        
+
     }
-    .search-category{
+
+    .search-category {
         width: 60px;
         font-size: 0.85rem;
     }
-    .search-category,
-    .search-btn {
-        flex-shrink: 0;
-        /* 👈 CRITICAL */
-    }
-
 
     .hamburger {
         display: flex;
@@ -329,7 +328,7 @@ body {
         flex-direction: column;
         position: absolute;
         top: 115px;
-        right: 10px;       
+        right: 10px;
         background-color: rgb(178, 173, 167);
         z-index: 1;
     }
@@ -340,9 +339,6 @@ body {
 
     .main-container {
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "product-card"
-            "sidebar";
     }
 
 }
