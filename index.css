@@ -277,16 +277,7 @@ body {
 }
 
 @media(max-width: 768px) {
-    body {
-        grid-template-columns: 1fr;
-
-        grid-template-areas:
-            "header"
-            "product-card"
-            "sidebar"
-            "footer";
-    }
-
+    
     .header {
         position: relative;
         flex-wrap: wrap;
