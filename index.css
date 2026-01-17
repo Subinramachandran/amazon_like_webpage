@@ -66,6 +66,9 @@ body {
     align-items: center;
     padding: 10px 16px;
     background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header-center {
@@ -75,7 +78,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     background-color: white;
-    border-radius: 6px;   
+    border-radius: 6px;
 }
 
 .header-right {
@@ -224,7 +227,7 @@ body {
 }
 
 .badge {
-    position: absolute;
+    position: relative;
     color: white;
     padding: 5px;
     font-weight: bold;
@@ -235,38 +238,60 @@ body {
 }
 
 .deal {
-    background-color: var(--deal-color);
+    position: absolute;
+    background-color: var(--deal-color);    
 }
 
 .sold {
-    background-color: var(--sold-color);
+    position: absolute;
+    background-color: var(--sold-color);   
 }
 
 .footer {
-    background-color: var(--footer-bg);
-    padding: var(--padding-lg);
-    font-size: var(--font-md);
-    color: white;
-    display: flex;
-    flex-direction: column;
+    background-color: #232f3e;
+    /* Amazon dark footer */
+    color: #ddd;
+    padding: 40px 60px 25px;
+    font-size: 14px;
 }
 
+/* top columns */
 .footer-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--padding-md);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
 }
 
+/* heading */
 .footer h4 {
-    margin-bottom: var(--padding-sm);
+    color: #fff;
+    font-size: var(--font-md);
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
+/* links */
 .footer p {
+    margin: 6px 0;
     cursor: pointer;
+    font-size: var(--font-sm);
+    transition: color 0.2s ease;
 }
 
 .footer p:hover {
+    color: #fff;
     text-decoration: underline;
+}
+
+/* bottom copyright */
+.footer .copyright {
+    border-top: 1px solid #3a4553;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #aaa;
 }
 
 @media(max-width: 768px) {
@@ -303,11 +328,14 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 115px;
+        top: 120px;
+        /* distance from top */
         right: 10px;
         background-color: rgb(178, 173, 167);
         z-index: 1;
+        /* make sure it is above other elements */
     }
+
 
     #menu-toggle:checked+.hamburger+.navbar {
         display: flex;
