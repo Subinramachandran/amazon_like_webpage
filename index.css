@@ -57,8 +57,10 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: sans-serif;
     background-color: var(--page-bg);
+    flex-direction: column;
 }
 
 .header {
@@ -96,6 +98,8 @@ body {
     position: relative;
     cursor: pointer;
     user-select: none;
+    margin-right: 16px;
+    line-height: 1;
 }
 
 .amazon-heading::after {
@@ -124,13 +128,14 @@ body {
     padding: 10px;
     font-size: 1rem;
     outline: none;
+    min-width: 0;
 }
 
 .search-btn {
     width: 48px;
     height: 44px;
     border: none;
-    background-color: #febd69;    
+    background-color: #febd69;
     cursor: pointer;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -167,6 +172,7 @@ body {
 }
 
 .main-container {
+    flex: 1;
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: var(--padding-md);
@@ -188,7 +194,7 @@ body {
     border-radius: var(--radius-md);
     background-color: white;
     text-align: center;
-    transition: transform 0.3s ease box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
@@ -221,7 +227,7 @@ body {
 }
 
 .badge {
-    position: relative;
+    position: absolute;
     color: white;
     padding: 5px;
     font-weight: bold;
@@ -232,12 +238,10 @@ body {
 }
 
 .deal {
-    position: absolute;
     background-color: var(--deal-color);
 }
 
 .sold {
-    position: absolute;
     background-color: var(--sold-color);
 }
 
@@ -332,8 +336,7 @@ body {
         /* make sure it is above other elements */
     }
 
-
-    #menu-toggle:checked+.hamburger+.navbar {
+    #menu-toggle:checked~.navbar {
         display: flex;
     }
 
