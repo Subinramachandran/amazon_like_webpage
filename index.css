@@ -98,7 +98,6 @@ body {
     user-select: none;
 }
 
-/* Amazon smile underline */
 .amazon-heading::after {
     content: "";
     position: absolute;
@@ -115,6 +114,8 @@ body {
     height: 44px;
     padding: 10px;
     background-color: #f3f3f3;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 .search-input {
@@ -125,21 +126,14 @@ body {
     outline: none;
 }
 
-.search-input {
-    flex: 1;
-    min-width: 0;
-}
-
 .search-btn {
     width: 48px;
     height: 44px;
     border: none;
-    background-color: #febd69;
-    /* Amazon yellow */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #febd69;    
     cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .search-btn:hover {
@@ -239,12 +233,12 @@ body {
 
 .deal {
     position: absolute;
-    background-color: var(--deal-color);    
+    background-color: var(--deal-color);
 }
 
 .sold {
     position: absolute;
-    background-color: var(--sold-color);   
+    background-color: var(--sold-color);
 }
 
 .footer {
@@ -299,6 +293,8 @@ body {
     .header {
         position: relative;
         flex-wrap: wrap;
+        position: sticky;
+        top: 0;
     }
 
     .header h1 {
