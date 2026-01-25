@@ -5,23 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
 </head>
 
 <body>
-    <header class="header">        
-            <h1 class="amazon-heading">Amazon</h1>        
+    <header class="header">
+        <h1 class="amazon-heading">Amazon</h1>
         <div class="header-center">
             <select class="search-category">
                 <option>All</option>
                 <option>Electronics</option>
                 <option>Books</option>
+                <option>Others</option>
             </select>
-
-            <input type="text" placeholder="Search on Amazon" class="search-input" />
-
+            <input type="text" class="search-input" placeholder="Search on Amazon" />
             <button class="search-btn">
                 <i class="fas fa-search"></i>
             </button>
@@ -29,56 +27,54 @@
         <div class="header-right">
             <input type="checkbox" id="menu-toggle" />
             <label for="menu-toggle" class="hamburger">☰</label>
-
             <nav class="navbar">
                 <a href="#" class="nav-links">Home</a>
                 <a href="#" class="nav-links">About</a>
-                <a href="#" class="nav-links">Contact</a>
+                <a href="#" class="nav-links">Contacts</a>
                 <a href="#" class="nav-links">Services</a>
             </nav>
         </div>
+
     </header>
     <main class="main-container">
         <section class="product-grid">
             <article class="product-card">
-                <span class="badge deal">Deal</span>
-                <img src="https://placehold.co/150x150" alt="product">
-                <p class="price">Rs.999</p>
+                <img src="https://placehold.co/150x150" alt="Product">
+                <p class="price"><strong>Rs.999</strong></p>
                 <h4>Product 1</h4>
             </article>
             <article class="product-card">
-                <span class="badge sold">Soldout</span>
-                <img src="https://placehold.co/150x150" alt="product">
-                <p class="price">Rs.999</p>
+                <img src="https://placehold.co/150x150" alt="Product">
+                <p class="price"><strong>Rs.999</strong></p>
                 <h4>Product 1</h4>
             </article>
             <article class="product-card">
-                <img src="https://placehold.co/150x150" alt="product">
-                <p class="price">Rs.999</p>
+                <img src="https://placehold.co/150x150" alt="Product">
+                <p class="price"><strong>Rs.999</strong></p>
                 <h4>Product 1</h4>
             </article>
             <article class="product-card">
-                <img src="https://placehold.co/150x150" alt="product">
-                <p class="price">Rs.999</p>
+                <img src="https://placehold.co/150x150" alt="Product">
+                <p class="price"><strong>Rs.999</strong></p>
                 <h4>Product 1</h4>
             </article>
         </section>
         <section class="sidebar">
-            <h3>20% off</h3>
+            <h4>20% discount</h4>
             <p>Free delivery above Rs.499</p>
         </section>
     </main>
     <footer class="footer">
         <div class="footer-columns">
             <div>
-                <h4>Get to Know Us</h4>
+                <h4>Get to know us</h4>
                 <p>About</p>
                 <p>Careers</p>
                 <p>Press</p>
             </div>
 
             <div>
-                <h4>Connect with Us</h4>
+                <h4>Connect with us</h4>
                 <p>Facebook</p>
                 <p>X.com</p>
                 <p>Instagram</p>
@@ -87,11 +83,12 @@
             <div>
                 <h4>Make money</h4>
                 <p>Sell on Amazon</p>
-                <p>Affiliate</p>
+                <p>Affiliates</p>
                 <p>Advertise</p>
             </div>
         </div>
         <p class="copyright">© 2026 Amazon Clone</p>
+
     </footer>
 </body>
 
